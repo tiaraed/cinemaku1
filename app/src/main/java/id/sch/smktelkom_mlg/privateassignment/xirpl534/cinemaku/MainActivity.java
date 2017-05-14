@@ -100,11 +100,11 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_jakarta) {
             fragment = new JakartaFragment();
-            setTitle("Jakarta");
+            setTitle("Now Playing");
             // Handle the camera action
         } else if (id == R.id.nav_home) {
             fragment = new HomeFragment();
-            setTitle("Home");
+            setTitle("Popular");
 
         } else if (id == R.id.nav_toprated) {
             fragment = new TopratedFragment();
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.theaters) {
             fragment = new TheatersFragment();
-            setTitle("Theaters");
+            setTitle("Cooming Soon");
         }
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commitNow();

@@ -5,10 +5,10 @@
         <item
 
             android:id="@+id/nav_jakarta"
-            android:title="Jakarta" />
+            android:title="Now Playing" />
         <item
             android:id="@+id/nav_home"
-            android:title="Home" />
+            android:title="Popular" />
         <item
             android:id="@+id/nav_toprated"
             android:title="Top Rated" />
@@ -19,7 +19,7 @@
             <item
                 android:id="@+id/theaters"
 
-                android:title="Theaters" />
+                android:title="Cooming Soon" />
 
         </menu>
     </item>
