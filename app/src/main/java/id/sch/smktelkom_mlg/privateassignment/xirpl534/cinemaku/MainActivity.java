@@ -106,6 +106,10 @@ public class MainActivity extends AppCompatActivity
             fragment = new HomeFragment();
             setTitle("Home");
 
+        } else if (id == R.id.nav_toprated) {
+            fragment = new TopratedFragment();
+            setTitle("Top Rated");
+
         } else if (id == R.id.theaters) {
             fragment = new TheatersFragment();
             setTitle("Theaters");
