@@ -1,5 +1,4 @@
 package id.sch.smktelkom_mlg.privateassignment.xirpl534.cinemaku;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -8,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 /**
- * Created by Mokleters on 14/05/2017.
+ * Created by Mokleters on 13/06/2017.
  */
 
 public class DatabaseHelper extends SQLiteOpenHelper {
@@ -19,7 +18,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static String KEY1 = "id_saved";
     public static String KEY2 = "title";
     public static String KEY3 = "desc";
-//    public static String KEY4 = "banner";
 
     private String TAG = "~DatabaseHelper";
 
@@ -30,11 +28,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         Log.d(TAG, "Creating table " + TABLE_NAME);
-//        String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME
-//                + "(" + KEY1 + " INTEGER PRIMARY KEY,"
-//                + KEY2 + " VARCHAR(70),"
-//                + KEY3 + " VARCHAR(200),"
-//                + KEY4 + " TEXT" + ")";
 
         String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME
                 + "(" + KEY1 + " INTEGER PRIMARY KEY,"
@@ -46,9 +39,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        // on upgrade drop older tables
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
-        // create new tables
         onCreate(db);
     }
 
@@ -57,7 +48,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put(KEY2, title);
         contentValues.put(KEY3, desc);
-//        contentValues.put(KEY4, banner);
 
         long result = db.insert(TABLE_NAME, null, contentValues);
         if (result == -1) {
